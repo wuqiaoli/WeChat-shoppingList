@@ -1,0 +1,14 @@
+.menu{
+    position: fixed;
+    bottom: 160rpx;
+    right: 40rpx;
+    width:100rpx;
+    height: 100rpx;
+    background: #ff5000;
+    font-size:12px;
+    border-radius:100%;
+    text-align: center;
+    line-height: 100rpx;
+    color: #fff
+}
+

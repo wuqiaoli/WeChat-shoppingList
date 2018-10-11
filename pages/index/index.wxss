@@ -1,0 +1,128 @@
+/**index.wxss**/
+.wrap{
+ width:100%;
+}
+.section{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+}
+.store{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  background: rgba(0,0,0,.1);
+  font-size: 12px;
+  padding:10rpx 20rpx;
+}
+.btn{
+  color: #fff;
+  margin-right:20rpx;
+}
+.ipt{
+  width:500rpx;
+}
+.store-font{
+  font-size: 12px;
+}
+.nav{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:20rpx;
+  z-index:5;
+}
+.search-list{
+   flex-direction: row;
+   width:100%;
+}
+.differ-style,.differ-place{
+  position: absolute;
+  top:50rpx;
+  width:100%;
+  background: #f8f8f8;
+  padding:20rpx 0;
+  z-index:6;
+}
+.btn-style{
+  margin:10rpx;
+  font-size: 12px !important;
+}
+.total{
+  text-align: center;
+}
+.search-btn{
+  position:relative;
+  width: 50%;
+  font-size: 12px !important;
+  border-radius: 0;
+}
+.search-btn::after {
+  border: none;
+}
+.search-btn-hover{
+  background-color: #F8F8F8 ;
+}
+b{
+  position:absolute;
+  top:25rpx;
+  right:100rpx;
+  width: 0;
+  height: 0;
+  border-width:8rpx;
+  border-style: solid dashed dashed;
+  border-color: #bbb transparent transparent;
+}
+.search-btn-hover b{
+    transform:rotate(180deg);
+    transform-origin:50% 25%;
+    transition: transform .5s ease-in;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:20rpx;
+  font-size: 0;
+}
+.list-con{
+  width:100%;
+  height: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20rpx;
+  padding-bottom: 8rpx;
+}
+.pic{
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+}
+.con{
+  float: left;
+  position: relative;
+  height: 120rpx;
+  margin-left:10rpx;
+}
+.title{
+  display: block;
+  width: 550rpx;
+  font-size: 14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+}
+.location{
+  font-size: 12px;
+  margin:10rpx 0;
+}
+.count{
+  position: absolute;
+  right: 0;
+  bottom: 2rpx;
+  font-size: 16px;
+  color: red;
+}

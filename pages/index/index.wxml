@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="wrap">
+    <view class="section">
+        <view class="store">
+          <icon class="btn" type="search" size="12"/>
+          <input class="ipt" placeholder="请输入店铺名称"  type="text" placeholder-class="store-font" confirm-type="search"/>
+        </view>
+        <icon class="place" type="download" size="20"/>
+    </view>
+    <view class="nav">
+      <view class="search-list">
+        <button class="search-btn" size="mini" wx:for="{{btnList}}" wx:key="index" hover-class="search-btn-hover" bindtap='show' data-index='{{index}}'>
+        {{item.name}}
+        <b></b>
+        </button>
+      </view>
+      <view class="differ-style" wx:if="{{flag==1}}">
+        <button class="btn-style" size="mini" wx:for="{{taste}}" wx:key="index" >{{item}}</button>
+        <view class="total">
+            <button class="btn-style" size="mini" type="primary">确定</button>
+            <button class="btn-style" size="mini" bindtap='close'>取消</button>
+        </view>
+      </view>
+      <view class="differ-place" wx:if="{{flag==2}}">
+          <button class="btn-style" size="mini" wx:for="{{locationList}}" wx:key="index" >{{item}}</button>
+          <view class="total">
+            <button class="btn-style" size="mini" type="primary">确定</button>
+            <button class="btn-style" size="mini" bindtap='close'>取消</button>
+          </view>
+      </view>
+    </view>
+    <view class="list" bindtap='goDetail'>
+      <view class="list-con" wx:for="{{shoplist}}" wx:key="index">
+       <image class="pic" src="{{item.img}}"></image>
+       <view class="con">
+        <text class="title">{{item.title}}</text>
+        <text class="title location">{{item.location}}</text>
+        <text class="count">{{item.count}}折</text>
+       </view>
+      </view>
+    </view>
+  </view>
+  <view>
+  </view>
+</view>
