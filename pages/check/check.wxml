@@ -1,0 +1,7 @@
+<!--pages/check/check.wxml-->
+<view class="container">
+  <view class="wrap">
+    <text class="money">总共消费{{title}}元</text>
+    <button type="{{flag?'':'warn'}}" size="mini" bindtap='pay'>{{flag?'支付':'已支付'}}</button>
+  </view>
+</view>

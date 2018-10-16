@@ -1,3 +1,21 @@
 <view class="container">
-  <view class="menu">去菜单</view>
+  <view class="menu" bindtap='checkOut'>{{count}}</view>
+  <view class="title">本店推荐</view>
+  <view class="wrap">
+     <image class="title-pic" src="{{src.img}}"></image>
+     <view class="price">
+        <view class="food">{{src.title}}</view>
+        <view class="food">{{src.price}}￥</view>
+     </view>
+  </view>
+  <view class="menu-con">
+      <view class="menu-con-img" wx:for="{{menuList}}" wx:key="{{index}}" bindtap="selectFood" data-state='{{item.state}}' data-key="{{index}}">
+          <image class="menu-pic" src="{{item.img}}"></image>
+          <view class="small">
+              <view class="samll-price">{{item.title}}</view>
+              <view class="samll-price">{{item.price}}￥</view>
+              <view class="small-border {{item.state==1?'active-tag':''}}"></view>
+          </view>
+      </view>
+  </view>
 </view>
