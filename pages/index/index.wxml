@@ -23,9 +23,9 @@
         </view>
       </view>
       <view class="differ-place" wx:if="{{flag==2}}">
-          <button class="btn-style" size="mini" wx:for="{{locationList}}" wx:key="index" >{{item}}</button>
+          <button class="btn-style" size="mini" wx:for="{{locationList}}" wx:key="index" bindtap='selectApi' data-index="{{index}}">{{item}}</button>
           <view class="total">
-            <button class="btn-style" size="mini" type="primary">确定</button>
+            <button class="btn-style" size="mini" type="primary" >确定</button>
             <button class="btn-style" size="mini" bindtap='close'>取消</button>
           </view>
       </view>

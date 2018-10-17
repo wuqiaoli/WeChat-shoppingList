@@ -1,0 +1,7 @@
+<view class="wrap"> 
+    <text class="title">舞动音乐</text>
+    <view class="audio" wx:for="{{audioList}}" wx:key="{{index}}">
+    <audio poster="{{item.poster}}" name="{{item.name}}" author="{{item.autor}}" src="{{item.src}}" id="myAudio" controls loop></audio>
+      <image  class="pic" src="../../img/1.png" bindtap='upload' data-src="{{item.src}}"></image>
+    </view>
+</view>

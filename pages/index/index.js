@@ -6,11 +6,11 @@ Page({
   data: {
     shoplist: [],
     btnList:[
-      {name:'美食类型'},{name:'地区筛选'}
+      {name:'功能'},{name:'API'}
     ],
-    taste:['火锅','自助餐','烧烤','面食','早餐','小吃'],
+    taste:['','自助餐','烧烤','面食','早餐','小吃'],
     flag:-1,
-    locationList:['余杭区','拱墅区','滨江区','萧山区']
+    locationList:['下载','相机','滨江区','萧山区']
 
   },
   //事件处理函数
@@ -18,6 +18,37 @@ Page({
     wx.navigateTo({
       url: '../detail/detail'
     })
+  },
+  show(e){
+    if (e.currentTarget.dataset.index==0){
+      this.setData({
+        flag:1
+      })
+    }else{
+      this.setData({
+        flag: 2
+      })
+    }
+  },
+  selectApi(e){
+    switch (e.currentTarget.dataset.index){
+      case 0: 
+        wx.navigateTo({
+          url: '../upload/upload'
+        });
+        this.close();
+      break;
+      case 1 :
+        wx.navigateTo({
+          url: '../camera/camera'
+        });
+        this.close();
+        break;
+      default: this.close()
+    }
+  },
+  close(){
+    this.setData({flag:-1})
   },
   onLoad: function () {
     var that = this;
@@ -28,6 +59,7 @@ Page({
     }, function () {
       wx.showToast({
         title: '加载数据失败',
+        mask:true
       })
     })
   },

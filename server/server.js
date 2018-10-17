@@ -33,6 +33,22 @@ app.get('/food', function (req, res) {
   });
 });
 
+// 音乐播放列表
+
+app.get('/audio', function (req, res) {
+  connection.query(sql.audio.list, function (err, result) {
+    if (err) {
+      return;
+    }
+    let obj = {
+      status: '200',
+      data: result
+    }
+    res.send(obj);
+  });
+});
+
+
 
 
 

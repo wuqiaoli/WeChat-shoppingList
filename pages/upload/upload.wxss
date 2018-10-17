@@ -1,0 +1,19 @@
+.wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.title{
+  padding:20rpx 0 ;
+}
+.audio{
+  position: relative;
+}
+.pic{
+  position: absolute;
+  top:50%;
+  margin-top: -50rpx;
+  right:16rpx;
+  width:100rpx;
+  height:100rpx;
+}

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/detail/detail",
-    "pages/check/check"
+    "pages/check/check",
+    "pages/upload/upload",
+    "pages/camera/camera"
   ],
   "window": {
     "backgroundTextStyle": "light",

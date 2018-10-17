@@ -10,6 +10,10 @@ var sqlInfo = {
   },
   selected :{
     list:''
-  } 
+  },
+  audio:{
+    list:'select * from audio'
+  }
+
 } 
 module.exports = sqlInfo;
